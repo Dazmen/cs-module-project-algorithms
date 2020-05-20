@@ -4,9 +4,17 @@ Returns: a List of integers
 '''
 def sliding_window_max(nums, k):
     # Your code here
+    max_window_values = []
+    left_pointer = 0
+    right_pointer = k 
 
-    pass
-
+    while right_pointer <= len(nums):
+        window = nums[left_pointer:right_pointer]
+        max_window_values.append(max(window))
+        left_pointer += 1
+        right_pointer += 1
+    
+    return max_window_values
 
 if __name__ == '__main__':
     # Use the main function here to test out your implementation 
