@@ -2,11 +2,21 @@
 Input: a List of integers as well as an integer `k` representing the size of the sliding window
 Returns: a List of integers
 '''
+
+#### This is already O(n) time?
 def sliding_window_max(nums, k):
     # Your code here
-
-    pass
-
+    max_window_values = []
+    left_pointer = 0
+    right_pointer = k 
+    
+    while right_pointer <= len(nums):
+        window = nums[left_pointer:right_pointer]
+        max_window_values.append(max(window))
+        left_pointer += 1
+        right_pointer += 1
+    
+    return max_window_values
 
 if __name__ == '__main__':
     # Use the main function here to test out your implementation 
